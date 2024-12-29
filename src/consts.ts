@@ -25,53 +25,63 @@ export const PROJECTS: Page = {
   DESCRIPTION: "Recent projects I have worked on.",
 }
 
+// Publications Page
+export const PUBLICATIONS: Page = {
+  TITLE: "Publications",
+  DESCRIPTION: "Publications I have contributed to.",
+}
+
 // Search Page
 export const SEARCH: Page = {
   TITLE: "Search",
-  DESCRIPTION: "Search all posts and projects by keyword.",
+  DESCRIPTION: "Search all contents by keyword.",
 }
 
 // Links
 export const LINKS: Links = [
-  { 
-    TEXT: "Home", 
-    HREF: "/", 
+  {
+    TEXT: "Home",
+    HREF: "/",
   },
-  { 
-    TEXT: "Blog", 
-    HREF: "/blog", 
+  {
+    TEXT: "Blog",
+    HREF: "/blog",
   },
-  { 
-    TEXT: "Projects", 
-    HREF: "/projects", 
+  {
+    TEXT: "Projects",
+    HREF: "/projects",
   },
-  { 
-    TEXT: "Career", 
-    HREF: "/career", 
+  {
+    TEXT: "Publications",
+    HREF: "/publications",
+  },
+  {
+    TEXT: "Career",
+    HREF: "/career",
   },
 ]
 
 // Socials
 export const SOCIALS: Socials = [
-  { 
+  {
     NAME: "Email",
-    ICON: "email", 
+    ICON: "email",
     TEXT: "you.siki@outlook.com",
     HREF: "mailto:you.siki@outlook.com",
   },
-  { 
+  {
     NAME: "Github",
     ICON: "github",
     TEXT: "yousiki",
     HREF: "https://github.com/yousiki/"
   },
-  { 
+  {
     NAME: "LinkedIn",
     ICON: "linkedin",
     TEXT: "yousiki",
     HREF: "https://www.linkedin.com/in/yousiki/",
   },
-  { 
+  {
     NAME: "Twitter",
     ICON: "twitter-x",
     TEXT: "__yousiki__",

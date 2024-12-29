@@ -17,6 +17,11 @@ const projects = (await getCollection("projects"))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0,3)
 
+const publications = (await getCollection("publications"))
+  .filter(publication => !publication.data.draft)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0,3)
+
 const stack = [
   {
     text: "Astro Sphere",
@@ -82,8 +87,8 @@ const stack = [
             <a href='/blog' class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
               Read my blog
             </a>
-            <a href='/career' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
-              View my career
+            <a href='/publications' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
+              View my publications
             </a>
           </div>
         </div>
@@ -169,6 +174,29 @@ const stack = [
             {projects.map((project) => (
               <li>
                 <ArrowCard entry={project} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Publication Preview Section -->
+      <section class="animate">
+        <div class="space-y-4">
+          <div class="flex justify-between">
+            <p class="font-semibold text-black dark:text-white">
+              Recent publications
+            </p>
+            <a href="/publications" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
+              <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
+                All publications
+              </span>
+            </a>
+          </div>
+          <ul class="space-y-4">
+            {publications.map((publication) => (
+              <li>
+                <ArrowCard entry={publication} />
               </li>
             ))}
           </ul>
