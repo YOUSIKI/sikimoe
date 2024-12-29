@@ -4,8 +4,8 @@ summary: "Accepted to ECCV 2024"
 date: "Sep 29 2023"
 draft: false
 tags:
-- ECCV
-- Spike Camera
+  - ECCV
+  - Spike Camera
 ---
 
 <div class="authors text-lg opacity-75 mb-6">

@@ -4,9 +4,9 @@ summary: "Accepted to CVPR 2023"
 date: "Jun 18 2023"
 draft: false
 tags:
-- CVPR
-- NeRF
-- Relighting
+  - CVPR
+  - NeRF
+  - Relighting
 ---
 
 <div class="authors text-lg opacity-75 mb-6">

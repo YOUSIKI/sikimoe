@@ -4,8 +4,8 @@ summary: "Accepted to TPAMI 2023"
 date: "Feb 13 2023"
 draft: false
 tags:
-- TPAMI
-- Inverse rendering
+  - TPAMI
+  - Inverse rendering
 ---
 
 <div class="authors text-lg opacity-75 mb-6">

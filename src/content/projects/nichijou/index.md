@@ -4,9 +4,9 @@ summary: "My nix / flake configuration for systems"
 date: "Jan 01 2024"
 draft: false
 tags:
-- Nix
-- Flake
-- Home-manager
+  - Nix
+  - Flake
+  - Home-manager
 demoUrl: https://github.com/YOUSIKI/nichijou
 repoUrl: https://github.com/YOUSIKI/nichijou
 ---
