@@ -18,25 +18,15 @@ const projects = (await getCollection("projects"))
   .slice(0,3)
 
 const stack = [
-  { 
-    text: "Astro", 
-    icon: "astro", 
-    href: "https://astro.build" 
+  {
+    text: "Astro Sphere",
+    icon: "astro",
+    href: "https://github.com/markhorn-dev/astro-sphere"
   },
   { 
-    text: "Javascript", 
-    icon: "javascript", 
-    href: "https://www.javascript.com" 
-  },
-  { 
-    text: "Typescript", 
-    icon: "typescript", 
-    href: "https://www.typescriptlang.org" 
-  },
-  { 
-    text: "Tailwind", 
-    icon: "tailwind", 
-    href: "https://tailwindcss.com" 
+    text: "Cloudflare Pages",
+    icon: "cloudflare", 
+    href: "https://www.cloudflare.com" 
   },
 ]
 ---
@@ -82,18 +72,18 @@ const stack = [
           <p class='animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
             Hello, I am ...
           </p>
-          <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
+          <p class='animated text-2xl md:text-3xl lg:text-5xl font-bold text-black dark:text-white'>
             YouSiki
           </p>
           <p class='animated text-sm md:text-base lg:text-lg opacity-75'>
-            A Ph.D. student at Camera Intelligence Lab, Peking University.
+            Currently pursuing PhD at Peking University.
           </p>
           <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
             <a href='/blog' class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
               Read my blog
             </a>
-            <a href='/work' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
-              View my work
+            <a href='/career' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
+              View my career
             </a>
           </div>
         </div>
@@ -107,28 +97,34 @@ const stack = [
       <!-- About Section -->
       <section class="animate">
         <article>
-          <p>👋 Hi there, this is YouSiki.</p>
           <p>
-            🎓 I received the BS degree from Peking University in 2022. And I am currently pursuing Ph.D. degree at Peking University. My research interests include neural rendering and neuromorphic cameras.
-          </p>
-          <p>
-            👨‍💻 All of my projects are available at <a href="https://github.com/yousiki" target="_blank" class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
-              <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                GitHub
-              </span>
-            </a>.
-          </p>
-          <p>📫 You may reach me by <a href="mailto:you.siki@outlook.com" class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
+          🎓 I received the BS degree from Peking University in 2022. And I am currently pursuing Ph.D. degree at 
+          <a href="https://camera.pku.edu.cn/" target="_blank" class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
             <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-              Email
+              Camera Intelligence Lab
             </span>
-          </a>.</p>
+          </a>, 
+          <a href="https://www.pku.edu.cn/" target="_blank" class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
+            <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
+              Peking University
+            </span>
+          </a>.
+          My research interests include neural rendering and neuromorphic cameras.
+          </p>
+          <p>
+          👨‍💻 All of my projects are available at 
+          <a href="https://github.com/yousiki" target="_blank" class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
+            <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
+              GitHub
+            </span>
+          </a>.
+          </p>
           <p>🧰 My favourite languages and tools:</p>
           <ul>
             <li>Programming languages: Python, Rust, Nix</li>
-            <li>Machine learning frameworks: Burn, JAX, PyTorch, TensorFlow</li>
-            <li>Code editors: Zed, Visual Studio Code, Neovim</li>
-            <li>Desktop environment: NixOS, Hyprland WM, Zsh, …</li>
+            <li>Machine learning frameworks: PyTorch, JAX, TensorFlow, Burn</li>
+            <li>Code editors: Visual Studio Code, Zed, Neovim</li>
+            <li>Desktop environment: macOS, NixOS, Hyprland WM, …</li>
           </ul>
         </article>
       </section>
@@ -153,32 +149,6 @@ const stack = [
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <!-- Tech Stack Section -->
-      <section class="animate">
-        <div class="space-y-4">
-          <p class="font-semibold text-black dark:text-white">
-            Website build with
-          </p>
-          <div class="flex flex-wrap items-center gap-2 mt-5">
-            {stack.map(item => (
-              <StackCard 
-                text={item.text}
-                icon={item.icon}
-                href={item.href}
-              />
-            ))}
-          </div>
-          <div>
-            Performing reactivity and statefulness, special guest
-            <a href="https://www.solidjs.com/" target="_blank" class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
-              <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                SolidJS
-              </span>
-            </a>
-          </div>
         </div>
       </section>
 
@@ -229,6 +199,24 @@ const stack = [
                 </a>
               </div>
             ))}
+        </div>
+      </section>
+
+      <!-- Tech Stack Section -->
+      <section class="animate">
+        <div class="space-y-4">
+          <p class="font-semibold text-black dark:text-white">
+            This website is built with
+          </p>
+          <div class="flex flex-wrap items-center gap-2 mt-5">
+            {stack.map(item => (
+              <StackCard 
+                text={item.text}
+                icon={item.icon}
+                href={item.href}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </div>
