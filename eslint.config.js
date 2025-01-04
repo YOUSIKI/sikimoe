@@ -2,6 +2,8 @@ import eslintPluginAstro from "eslint-plugin-astro";
 import tsParser from "@typescript-eslint/parser";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import js from "@eslint/js";
+import prettierConfig from "eslint-config-prettier";
+import prettierPlugin from "eslint-plugin-prettier";
 
 export default [
   {
@@ -22,6 +24,13 @@ export default [
       ecmaVersion: "latest",
       sourceType: "module",
     },
+    plugins: {
+      prettier: prettierPlugin,
+    },
+    rules: {
+      "prettier/prettier": "error",
+      ...prettierConfig.rules,
+    },
   },
   {
     files: ["**/*.ts", "**/*.tsx"],
@@ -35,9 +44,12 @@ export default [
     },
     plugins: {
       "@typescript-eslint": tsPlugin,
+      prettier: prettierPlugin,
     },
     rules: {
+      "prettier/prettier": "error",
       ...tsPlugin.configs.recommended.rules,
+      ...prettierConfig.rules,
     },
   },
 ];

@@ -19,10 +19,10 @@ export default function Publications({ data, tags }: Props) {
       data.filter((entry) =>
         Array.from(filter()).every((value) =>
           entry.data.tags.some(
-            (tag: string) => tag.toLowerCase() === String(value).toLowerCase(),
-          ),
-        ),
-      ),
+            (tag: string) => tag.toLowerCase() === String(value).toLowerCase()
+          )
+        )
+      )
     );
   });
 
@@ -30,8 +30,8 @@ export default function Publications({ data, tags }: Props) {
     setFilter(
       (prev) =>
         new Set(
-          prev.has(tag) ? [...prev].filter((t) => t !== tag) : [...prev, tag],
-        ),
+          prev.has(tag) ? [...prev].filter((t) => t !== tag) : [...prev, tag]
+        )
     );
   }
 
@@ -55,14 +55,14 @@ export default function Publications({ data, tags }: Props) {
                       "bg-black/5 dark:bg-white/10",
                       "hover:bg-black/10 hover:dark:bg-white/15",
                       "transition-colors duration-300 ease-in-out",
-                      filter().has(tag) && "text-black dark:text-white",
+                      filter().has(tag) && "text-black dark:text-white"
                     )}
                   >
                     <svg
                       class={cn(
                         "size-5 fill-black/50 dark:fill-white/50",
                         "transition-colors duration-300 ease-in-out",
-                        filter().has(tag) && "fill-black dark:fill-white",
+                        filter().has(tag) && "fill-black dark:fill-white"
                       )}
                     >
                       <use

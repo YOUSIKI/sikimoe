@@ -31,12 +31,12 @@ codeBlocks.forEach((code) => {
 function copyCode(event) {
   let codeBlock = getChildByTagName(
     event.currentTarget.parentElement.parentElement,
-    "CODE",
+    "CODE"
   );
   navigator.clipboard.writeText(codeBlock.innerText);
   const use = getChildByTagName(
     getChildByTagName(event.currentTarget, "svg"),
-    "use",
+    "use"
   );
   use.setAttribute("href", "/copy.svg#filled");
   setTimeout(() => {
@@ -48,6 +48,6 @@ function copyCode(event) {
 
 function getChildByTagName(element, tagName) {
   return Array.from(element.children).find(
-    (child) => child.tagName === tagName,
+    (child) => child.tagName === tagName
   );
 }

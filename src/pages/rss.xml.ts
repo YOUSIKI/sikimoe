@@ -14,7 +14,7 @@ export async function GET(context: Context) {
   const items = [...posts, ...projects, ...publications];
 
   items.sort(
-    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
   );
 
   return rss({
