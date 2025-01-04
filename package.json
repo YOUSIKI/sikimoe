@@ -12,7 +12,8 @@
     "astro": "astro",
     "lint": "eslint --format 'table' .",
     "lint:fix": "eslint --format 'table' --fix .",
-    "prepare": "pnpm exec husky install"
+    "prepare": "pnpm exec husky install",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
