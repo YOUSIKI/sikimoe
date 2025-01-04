@@ -85,17 +85,17 @@ import Container from "@components/Container.astro"
 
 <script is:inline>
   function toggleDrawer() {
-    const drawer = document.getElementById("drawer")
-    const drawerButton = document.getElementById("header-drawer-button")
-    drawer?.classList.toggle("open")
-    drawerButton?.classList.toggle("open")
+    const drawer = document.getElementById("drawer");
+    const drawerButton = document.getElementById("header-drawer-button");
+    drawer?.classList.toggle("open");
+    drawerButton?.classList.toggle("open");
   }
 
   function initializeDrawerButton() {
-    const drawerButton = document.getElementById("header-drawer-button")
-    drawerButton?.addEventListener("click", toggleDrawer)
+    const drawerButton = document.getElementById("header-drawer-button");
+    drawerButton?.addEventListener("click", toggleDrawer);
   }
 
-  document.addEventListener("astro:after-swap", initializeDrawerButton)
-  initializeDrawerButton()
+  document.addEventListener("astro:after-swap", initializeDrawerButton);
+  initializeDrawerButton();
 </script>
