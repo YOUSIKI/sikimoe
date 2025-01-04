@@ -1,41 +1,41 @@
-import type { Site, Page, Links, Socials } from "@types"
+import type { Site, Page, Links, Socials } from "@types";
 
 // Global
 export const SITE: Site = {
   TITLE: "Siki.moe",
   DESCRIPTION: "Welcome to Siki.moe, a personal portfolio and blog.",
   AUTHOR: "YouSiki",
-}
+};
 
 // Career Page
 export const CAREER: Page = {
   TITLE: "Career",
   DESCRIPTION: "Places I have studied and worked.",
-}
+};
 
 // Blog Page
 export const BLOG: Page = {
   TITLE: "Blog",
   DESCRIPTION: "Writing on topics I am passionate about.",
-}
+};
 
-// Projects Page 
+// Projects Page
 export const PROJECTS: Page = {
   TITLE: "Projects",
   DESCRIPTION: "Recent projects I have worked on.",
-}
+};
 
 // Publications Page
 export const PUBLICATIONS: Page = {
   TITLE: "Publications",
   DESCRIPTION: "Publications I have contributed to.",
-}
+};
 
 // Search Page
 export const SEARCH: Page = {
   TITLE: "Search",
   DESCRIPTION: "Search all contents by keyword.",
-}
+};
 
 // Links
 export const LINKS: Links = [
@@ -59,7 +59,7 @@ export const LINKS: Links = [
     TEXT: "Career",
     HREF: "/career",
   },
-]
+];
 
 // Socials
 export const SOCIALS: Socials = [
@@ -73,7 +73,7 @@ export const SOCIALS: Socials = [
     NAME: "Github",
     ICON: "github",
     TEXT: "yousiki",
-    HREF: "https://github.com/yousiki/"
+    HREF: "https://github.com/yousiki/",
   },
   {
     NAME: "LinkedIn",
@@ -87,5 +87,4 @@ export const SOCIALS: Socials = [
     TEXT: "__yousiki__",
     HREF: "https://x.com/__yousiki__/",
   },
-]
-
+];
