@@ -55,4 +55,24 @@ const next = items[(index + 1) % items.length]
       </svg>
     </a>
   </div>
+  {(collection === "blog" || collection === "projects") && (
+    <div class="mt-16">
+      <script src="https://giscus.app/client.js"
+        data-repo="YOUSIKI/sikimoe"
+        data-repo-id="R_kgDONexiIA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDONexiIM4Clt6t"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+  )}
 </div>
