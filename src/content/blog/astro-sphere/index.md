@@ -7,4 +7,4 @@ tags:
   - Astro
 ---
 
-I find Astro Sphere to be a great Astro starter template and started using it for my personal website https://www.siki.moe/. It is primarily Astro, Tailwind and Typescript, with a very small amount of SolidJS for stateful components. And the generated site is deployed to Cloudflare Pages.
+I find Astro Sphere to be a great Astro starter template and started using it for my personal website [www.siki.moe](https://www.siki.moe/). It is primarily Astro, Tailwind and Typescript, with a very small amount of SolidJS for stateful components. And the generated site is deployed to Cloudflare Pages.
