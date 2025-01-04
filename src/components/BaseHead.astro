@@ -95,3 +95,18 @@ const { title, description, image = "/open-graph.jpg" } = Astro.props;
     s.parentNode.insertBefore(hm, s);
   })();
 </script>
+
+<!-- Google tag (gtag.js) -->
+<script
+  is:inline
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-3J8FWF8LPY"></script>
+<script is:inline type="text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-3J8FWF8LPY");
+</script>
