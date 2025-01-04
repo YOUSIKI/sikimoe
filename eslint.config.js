@@ -11,6 +11,16 @@ export default [
   },
   ...eslintPluginAstro.configs.recommended,
   {
+    files: ["**/*.astro"],
+    plugins: {
+      prettier: prettierPlugin,
+    },
+    rules: {
+      "prettier/prettier": "error",
+      ...prettierConfig.rules,
+    },
+  },
+  {
     files: ["**/*.js", "**/*.mjs", "**/*.cjs"],
     ...js.configs.recommended,
     languageOptions: {
