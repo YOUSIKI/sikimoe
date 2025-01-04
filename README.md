@@ -11,4 +11,4 @@ The source code for my personal website (https://www.siki.moe/).
 
 ## License
 
-MIT
+MIT License
