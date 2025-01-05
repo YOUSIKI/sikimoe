@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard";
 import StackCard from "@components/StackCard.astro";
@@ -7,19 +7,28 @@ import { SITE, SOCIALS } from "@consts";
 import TwinklingStars from "@components/TwinklingStars.astro";
 import MeteorShower from "@components/MeteorShower.astro";
 
+type Post = CollectionEntry<"blog">;
+type Project = CollectionEntry<"projects">;
+type Publication = CollectionEntry<"publications">;
+
 const posts = (await getCollection("blog"))
-  .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .filter((post: Post) => !post.data.draft)
+  .sort((a: Post, b: Post) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 3);
 
 const projects = (await getCollection("projects"))
-  .filter((project) => !project.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .filter((project: Project) => !project.data.draft)
+  .sort(
+    (a: Project, b: Project) => b.data.date.getTime() - a.data.date.getTime()
+  )
   .slice(0, 3);
 
 const publications = (await getCollection("publications"))
-  .filter((publication) => !publication.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .filter((publication: Publication) => !publication.data.draft)
+  .sort(
+    (a: Publication, b: Publication) =>
+      b.data.date.getTime() - a.data.date.getTime()
+  )
   .slice(0, 3);
 
 const stack = [
@@ -202,7 +211,7 @@ const stack = [
           </div>
           <ul class="space-y-4">
             {
-              posts.map((post) => (
+              posts.map((post: Post) => (
                 <li>
                   <ArrowCard entry={post} />
                 </li>
@@ -232,7 +241,7 @@ const stack = [
           </div>
           <ul class="space-y-4">
             {
-              projects.map((project) => (
+              projects.map((project: Project) => (
                 <li>
                   <ArrowCard entry={project} />
                 </li>
@@ -262,7 +271,7 @@ const stack = [
           </div>
           <ul class="space-y-4">
             {
-              publications.map((publication) => (
+              publications.map((publication: Publication) => (
                 <li>
                   <ArrowCard entry={publication} />
                 </li>

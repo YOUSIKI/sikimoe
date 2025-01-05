@@ -6,14 +6,20 @@ import BottomLayout from "@layouts/BottomLayout.astro";
 import Search from "@components/Search";
 import { SEARCH } from "@consts";
 
-const posts = (await getCollection("blog")).filter((post) => !post.data.draft);
+type Post = CollectionEntry<"blog">;
+type Project = CollectionEntry<"projects">;
+type Publication = CollectionEntry<"publications">;
+
+const posts = (await getCollection("blog")).filter(
+  (post: Post) => !post.data.draft
+);
 
 const projects = (await getCollection("projects")).filter(
-  (post) => !post.data.draft
+  (project: Project) => !project.data.draft
 );
 
 const publications = (await getCollection("publications")).filter(
-  (post) => !post.data.draft
+  (publication: Publication) => !publication.data.draft
 );
 
 const data = [
