@@ -1,5 +1,6 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import typography from "@tailwindcss/typography";
+import catppuccin from "@catppuccin/tailwindcss";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -58,5 +59,11 @@ export default {
       },
     },
   },
-  plugins: [typography],
+  plugins: [
+    typography,
+    catppuccin({
+      prefix: "ctp",
+      defaultFlavour: "latte",
+    }),
+  ],
 };
