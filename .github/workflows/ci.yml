@@ -59,7 +59,7 @@ jobs:
       - name: Lint
         run: pnpm run lint
   deploy:
-    name: Deploy to Cloudflare Pages
+    name: Deploy to Cloudflare Pages for testing
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
