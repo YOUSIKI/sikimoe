@@ -7,6 +7,7 @@ on:
 permissions:
   contents: read
   security-events: write
+  deployments: write
 
 jobs:
   check:
@@ -78,7 +79,7 @@ jobs:
       - name: Build
         run: pnpm run build
       - id: deploy
-        name: Deploy to Cloudflare Workers
+        name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@7a5f8bbdfeedcde38e6777a50fe685f89259d4ca
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
