@@ -25,7 +25,7 @@
     "@astrojs/tailwind": "^5.1.4",
     "@catppuccin/tailwindcss": "^0.1.6",
     "@tailwindcss/typography": "^0.5.16",
-    "astro": "^5.1.7",
+    "astro": "^5.1.10",
     "clsx": "^2.1.1",
     "fuse.js": "^7.0.0",
     "sharp": "^0.33.5",
