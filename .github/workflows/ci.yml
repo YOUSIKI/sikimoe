@@ -58,8 +58,8 @@ jobs:
           wait-for-processing: true
       - name: Lint
         run: pnpm run lint
-  deploy:
-    name: Deploy to Cloudflare Pages for testing
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -78,11 +78,3 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build
         run: pnpm run build
-      - id: deploy
-        name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@7a5f8bbdfeedcde38e6777a50fe685f89259d4ca
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          command: pages deploy dist --project-name=sikimoe --branch=test
